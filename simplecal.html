@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1> Enter Two Numbers : </h1>
+        <br><br>
+        <input type="number" id="num1">
+        <br>
+        <input type="number" id="num2">
+        <br>
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">Subtraction</button>
+        <button onclick="mul()">Multiplication</button>
+        <button onclick="div()">Division</button><br>
+        <p id="out"></p>
+        <script>
+            
+            let output=0;
+            function add()
+            {
+                var a=parseInt(document.getElementById("num1").value);
+            var b=parseInt(document.getElementById("num2").value);
+                output=a+b;
+                document.getElementById("out").innerHTML=output;
+            }
+            function mul()
+            {
+                var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+                output=(a*b);
+                document.getElementById("out").innerHTML=output;
+            }
+            function sub()
+            {
+                var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+                output=(a-b);
+                document.getElementById("out").innerHTML=output;
+            }
+            function div()
+            {
+                var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+                if(b==0)
+                    output="Division by zero Error";
+                else
+                    output=(a/b);
+                    document.getElementById("out").innerHTML=output;
+            }
+        </script>
+    </body>
+</html>

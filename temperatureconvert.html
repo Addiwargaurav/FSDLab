@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+    const temperatureConverter = {
+  toCelsius: function (fahrenheit) {
+    return ((fahrenheit - 32) * 5) / 9;
+  },
+
+  toFahrenheit: function (celsius) {
+    return (celsius * 9) / 5 + 32;
+  },
+};
+console.log(temperatureConverter.toCelsius(32));
+console.log(temperatureConverter.toFahrenheit(0));
+</script>
+    </body>
+</html>

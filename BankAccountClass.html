@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            class BankAccount{
+                constructor(accountholder,balance){
+                    this.accountholder=accountholder;
+                    this.balance=balance;
+                }
+                deposit(amount)
+                {
+                    this.balance+=amount;
+                }
+                withdraw(amount)
+                {
+                    if(amount>this.balance)
+                        console.log("Insufficient Balance");
+                    else  
+                         this.balance-=amount;
+                }
+            }
+            function transfer(fromAccount, toAccount, amount) {
+                if (amount <= 0) {
+                     console.log("Transfer amount must be greater than zero.");
+                        return;
+                   }
+                  if (fromAccount.balance < amount) {
+                      console.log("Insufficient balance for the transfer.");
+                        return;
+                 }
+                fromAccount.withdraw(amount);
+                toAccount.deposit(amount);
+                 console.log(`Transferred ${amount} from ${fromAccount.accountholder} to ${toAccount.accountholder}`);
+           }
+           const acc1=new BankAccount("Sai",1200);
+           const acc2=new BankAccount("Charan",1500);
+           transfer(acc1,acc2,200);
+           acc1.withdraw(1200);
+        </script>
+    </body>
+</html>

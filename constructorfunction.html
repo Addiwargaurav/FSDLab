@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+        function Student(name, grade, age, eye) {
+               this.Name = name;
+  this.grade = grade;
+  this.study= function()
+  {
+    console.log("Under Graduate");
+  }
+       }
+      Student.prototype.getGrade=function() {
+        console.log(this.grade);
+      }
+      const charan=new Student("sai",9.0);
+      charan.study();
+      charan.getGrade();
+</script>
+</body>
+</html>

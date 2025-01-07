@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            class Animal{
+                speak()
+                {
+                    console.log("general Sounds");
+                }
+            }
+            class Dog extends Animal{
+                speak()
+                {
+                    console.log("Woof!");
+                }
+            }
+            let animal=new Animal();
+            animal.speak();
+            let dog=new Dog();
+            dog.speak();
+        </script>
+    </body>
+</html>

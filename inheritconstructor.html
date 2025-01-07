@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+            function Person(name, age) { 
+    this.name = name; 
+    this.age = age;   
+    this.describe=function(){
+        return "Name: "+this.name+" , Age : "+this.age;
+    }  
+}; 
+function Student(name,age,grade)
+{
+    this.name=name;
+    Person.call(name,age);
+    this.grade=grade;
+    this.graded=function(){
+        return "Grade : "+this.grade;
+    }
+    this.study=function(){
+        return this.name+" is studying for Grade "+this.grade;
+    }
+}
+const student1=new Student("John",30,"A");
+const studen=new Person("John",30);
+console.log(student1.study());
+console.log(studen.describe());
+        </script>
+    </body>
+</html>
